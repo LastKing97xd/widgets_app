@@ -27,18 +27,18 @@ class SnackbarScreen extends StatelessWidget {
       context: context, 
       //siempre el builder es en tiempo de ejecucion
       builder: (context) => AlertDialog(
-        title: Text('Estas seguro?'),
-        content: Text('Consectetur irure anim officia sit est. Nisi mollit consectetur ullamco irure in consectetur laboris ad occaecat. Sit duis elit Lorem aute nulla deserunt aliquip duis culpa. Consectetur deserunt dolor reprehenderit culpa excepteur reprehenderit elit. Ea laborum qui aliqua sint incididunt anim nulla. Cupidatat Lorem commodo mollit laborum veniam sint sint mollit incididunt.'),
+        title: const Text('Estas seguro?'),
+        content: const Text('Consectetur irure anim officia sit est. Nisi mollit consectetur ullamco irure in consectetur laboris ad occaecat. Sit duis elit Lorem aute nulla deserunt aliquip duis culpa. Consectetur deserunt dolor reprehenderit culpa excepteur reprehenderit elit. Ea laborum qui aliqua sint incididunt anim nulla. Cupidatat Lorem commodo mollit laborum veniam sint sint mollit incididunt.'),
         actions: [
           //botonos diferentes en el opendialog
           TextButton(
             //esto es gracias al goRouter
             onPressed: () => context.pop(), 
-            child: Text('Cancelar')),
+            child: const Text('Cancelar')),
           FilledButton(
             //esto es gracias al goRouter
             onPressed: () => context.pop(),
-            child: Text('Aceptar'))
+            child: const Text('Aceptar'))
         ],
       ),
     );
