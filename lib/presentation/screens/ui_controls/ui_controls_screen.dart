@@ -28,14 +28,17 @@ enum Transportation {car, plane, boat, submarine}
 
 class _UiControlsViewState extends State<_UiControlsView> {
 
-
   bool isDeveloper = true;
-  Transportation selectedTransportation = Transportation.car;
+  //Transportation selectedTransportation = Transportation.car;
   //Asi seria vacio
-  //Transportation? selectedTransportation ;
+  Transportation? selectedTransportation ;
   bool desayuno = false;
   bool almuerzo = false;
   bool cena = false;
+
+  // para mandar subtitulo
+
+  String prueba = 'Elige una opcion !' ;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +57,9 @@ class _UiControlsViewState extends State<_UiControlsView> {
 
         ExpansionTile(
           title: const Text('Vehiculo de transporte'),
-          subtitle: Text('$selectedTransportation'),
+          //subtitle: Text('$selectedTransportation'),
+          //Aqui agrego el texto en vez del enum
+          subtitle: Text(prueba),
           children: [
             RadioListTile(
               title: const Text('By Car'),
@@ -63,6 +68,8 @@ class _UiControlsViewState extends State<_UiControlsView> {
               groupValue: selectedTransportation, 
               onChanged: (value) => setState(() {
                 selectedTransportation = Transportation.car;
+                //cambio el estado de mi string
+                prueba = 'Viajar por carro';
               }),
             ),
 
@@ -73,6 +80,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
               groupValue: selectedTransportation, 
               onChanged: (value) => setState(() {
                 selectedTransportation = Transportation.boat;
+                prueba = 'Viajar por barco';
               }),
             ),
 
@@ -83,6 +91,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
               groupValue: selectedTransportation, 
               onChanged: (value) => setState(() {
                 selectedTransportation = Transportation.plane;
+                prueba = 'Viajar por avion';
               }),
             ),
 
@@ -93,6 +102,7 @@ class _UiControlsViewState extends State<_UiControlsView> {
               groupValue: selectedTransportation, 
               onChanged: (value) => setState(() {
                 selectedTransportation = Transportation.submarine;
+                prueba = 'Viajar por submarino';
               }),
             ),
           ],
