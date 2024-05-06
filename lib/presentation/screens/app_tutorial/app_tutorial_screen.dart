@@ -92,7 +92,7 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
           finalBarra ? Positioned(
             right: 30,
             bottom: 30,
-            //bullet - bolitas que marcan la pagina OJO
+            //TODO bullet - bolitas que marcan la pagina OJO
             child: FadeInRight(
               //que se mueva 15 uni.
               from: 15,
