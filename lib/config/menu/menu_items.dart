@@ -18,6 +18,8 @@ class MenuItem {
 
 const List<MenuItem> appMenuItems =[
 
+
+
   MenuItem(
     title: 'Riverpod Counter', 
     subTitle: 'Introduccion a Riverpod', 
@@ -81,7 +83,12 @@ const List<MenuItem> appMenuItems =[
     icon: Icons.list_alt_rounded
   ),
 
-  
+  MenuItem(
+    title: 'Cambiar Tema', 
+    subTitle: 'Cambiar tema de la aplicacion', 
+    link: '/theme-changer', 
+    icon: Icons.color_lens_outlined
+  ),
    
 ];
 
